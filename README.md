@@ -49,4 +49,4 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 Navigate to the URL in your preferred browser:
 
-(/Pictures/fast_api_hello_world))
+![image info](/Pictures/fast_api_hello_world))
