@@ -1,4 +1,4 @@
-import psycopg2
+"""import psycopg2
 from fastapi import FastAPI, status
 import os
 import urllib
@@ -11,10 +11,7 @@ db_username = os.environ.get('DB_USERNAME', 'pssqlfastapihackathonadmin')
 db_password = os.environ.get('DB_PASSWORD', '')
 ssl_mode = os.environ.get('SSL_MODE','require')
 
-
-# Update connection string information
 app = FastAPI()
-
 
 @app.get("/v1/Customer/ChurnScore/{customer_id}")
 async def get_customer_churn_score(customer_id:int):
@@ -73,4 +70,4 @@ async def get_customer_highest_prediction(customer_id:int):
     records = cur.fetchall()
      
     record = [dict((cur.description[i][0],value) for i, value in enumerate(row)) for row in records]
-    return record
+    return record"""
