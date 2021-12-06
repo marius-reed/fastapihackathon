@@ -1,4 +1,4 @@
-"""import psycopg2
+import psycopg2
 from fastapi import FastAPI, status
 import os
 import urllib
@@ -70,4 +70,4 @@ async def get_customer_highest_prediction(customer_id:int):
     records = cur.fetchall()
      
     record = [dict((cur.description[i][0],value) for i, value in enumerate(row)) for row in records]
-    return record"""
+    return record
