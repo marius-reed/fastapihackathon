@@ -28,7 +28,7 @@ In this description you will find the following
 
 ## 2.1. Getting set up before the hackathon
 Before the hackathon you should have the following installed on your computer. How to install each component is described below.
-- Python 3 (recommended, not mandatory. [Windows guide](https://phoenixnap.com/kb/how-to-install-python-3-windows), [Mac guide](https://docs.python-guide.org/starting/install3/osx/)) 
+- Python 3 ([Windows guide](https://phoenixnap.com/kb/how-to-install-python-3-windows), [Mac guide](https://docs.python-guide.org/starting/install3/osx/)) 
 - [Git](https://git-scm.com/downloads)
 - Create an account on github if you do not already have one
 
@@ -36,7 +36,7 @@ Optional
 - [Install Visual Studio Code](https://code.visualstudio.com/download)
 - [Create free azure account](https://azure.microsoft.com/en-us/free/)
 
-### 2.1.1. Installing Python 3 (optional but recommended)
+### 2.1.1. Installing Python 3
 It is recommended to have Python 3 installed on your computer before the hackathon. This will allow you to test the application on your own computer before we deploy it to the cloud.
 
 You can install Python 3 by following [this guide for Windows](https://phoenixnap.com/kb/how-to-install-python-3-windows) or [this guide for Mac](https://docs.python-guide.org/starting/install3/osx/). Make sure that you also install pip, a package installer for Python (this is included in both guides).
