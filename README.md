@@ -5,7 +5,7 @@ In this hackathon we will get familiar with FastAPI and perform the following st
 1. Host our first simple FastAPI locally using uvicorn.
 2. Create a FastAPI serving data from a PostgresSQL Database.
 3. Host the FastAPI on Azure as a Web App.
-4.  Optinonal: Add extra functionality to our API by requesting additional information from another API.
+4.  Optional: Add extra functionality to the API.
 
 In this description you will find the following
 
@@ -21,6 +21,8 @@ In this description you will find the following
 - [4. Host the simple FastAPI on Azure as a Web App](#4-host-the-simple-fastapi-on-azure-as-a-web-app)
   - [4.1. Create a Web App](#41-create-a-web-app)
   - [4.2. Deploy your API as a Web App](#42-deploy-your-api-as-a-web-app)
+- [5 FastAPI - Customer prediction scores](#5-fastapi---customer-prediction-scores)
+  - [Tasks](#tasks)
 
 # 2. Setup and installation
 
@@ -30,8 +32,9 @@ Before the hackathon you should have the following installed on your computer. H
 - [Git](https://git-scm.com/downloads)
 - Create an account on github if you do not already have one
 
-Optional (recommended)
+Optional
 - [Install Visual Studio Code](https://code.visualstudio.com/download)
+- [Create free azure account](https://azure.microsoft.com/en-us/free/)
 
 ### 2.1.1. Installing Python 3 (optional but recommended)
 It is recommended to have Python 3 installed on your computer before the hackathon. This will allow you to test the application on your own computer before we deploy it to the cloud.
@@ -163,3 +166,36 @@ Go back to deployment center and click on **Browse**. You should now see the res
 If you go to /docs behind the url you will get the Swagger documentation of your API where you can test all the endpoints (now we only have one).
 
 ![](Pictures/azure_web_app_browse_docs.png)
+
+# 5 FastAPI - Customer prediction scores
+
+In the git repo there is another FastAPI called *partII.py*. The API is used to make scores from prediction models available.
+
+This API is connected to a PostgresSQL database with a table called **fastapihackathon.CustomerScore** with the following definition:
+
+```
+CREATE TABLE fastapihackathon.CustomerScore (
+   customer_model_id integer not null,
+   customer_id integer not null,
+   model_id integer not null,
+   model_name varchar(50) not null,
+   score float not null,
+   updated_date date not null,
+   has_churned BOOLEAN
+);
+```
+
+There are currently customer_id's in the range 10000-10100 and (model_id, model_name) IN [(100,churn_30d), (101,upgrade_subscription_30d), (102,downgrade_subscription_30d)].
+
+## Tasks
+- Host the API in partII.py locally.
+- Change your Web App to host the partII-API instead of the simple "Hello World"-API.
+- Test the different endpoints from the swagger interface
+- Extend functionality for the API:
+  -  Endpoint to request the Upgrade score for a given customer
+  -  Endpoint to request the Downgrade score for a given customer
+  -  Endpoint to request all available scores for a given customer
+  -  Endpoint to return top X customers with highest score from a prediction model.
+
+  
+   
